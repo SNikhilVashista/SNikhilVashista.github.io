@@ -5,36 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nikhil Vashista Shrangare | Portfolio & Blog</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #ffffff;
-      color: #333;
+      color: #1f2937;
       line-height: 1.6;
     }
     header, nav, footer {
-      background: #f5f5f5;
+      background: #10b981; /* Emerald */
+      color: white;
       padding: 1em;
       text-align: center;
     }
     nav a {
       margin: 0 15px;
       text-decoration: none;
-      color: #333;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #d1fae5; /* Lighter emerald */
     }
     main {
-      padding: 2em;
-      max-width: 800px;
+      padding: 2em 1em;
+      max-width: 960px;
       margin: auto;
     }
     section {
       margin-bottom: 3em;
     }
-    .project, .blog-post {
-      border: 1px solid #ddd;
-      padding: 1em;
-      border-radius: 8px;
+    .section-title {
+      font-size: 1.8em;
+      border-bottom: 2px solid #10b981;
+      padding-bottom: 0.3em;
       margin-bottom: 1em;
+    }
+    .card {
+      border: 1px solid #e5e7eb;
+      padding: 1.2em;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      margin-bottom: 1.5em;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     }
     @media (max-width: 600px) {
       nav a {
@@ -59,36 +80,38 @@
 
   <main>
     <section id="about">
-      <h2>About Me</h2>
+      <h2 class="section-title">About Me</h2>
       <p>I'm Nikhil, currently pursuing my M.S. in Computer Science at Georgia State University. I specialize in AI/ML, Neuromorphic Computing, CUDA programming, and high-performance systems. I bring a blend of academic research and industry experience from Intel, KLA, and Tata Consultancy Services.</p>
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
-      <div class="project">
+      <h2 class="section-title">Projects</h2>
+      <div class="card">
         <h3>ADHD Detection Using ML</h3>
-        <p>fMRI analysis with voxel averaging and SVM classification. <a href="https://github.com/SNikhilVashista/ADHD-classification-using-Image-Processing-and-AI-classification" target="_blank">GitHub</a></p>
+        <p>fMRI analysis with voxel averaging and SVM classification.</p>
+        <p><a href="https://github.com/SNikhilVashista/ADHD-classification-using-Image-Processing-and-AI-classification" target="_blank">View on GitHub</a></p>
       </div>
-      <div class="project">
+      <div class="card">
         <h3>Intel oneAPI for AMD GPUs</h3>
-        <p>Enabled oneDNN to run on AMD using MIOpen. <a href="https://github.com/oneapi-src/oneDNN/pull/1348" target="_blank">GitHub PR</a></p>
+        <p>Enabled oneDNN to run on AMD using MIOpen.</p>
+        <p><a href="https://github.com/oneapi-src/oneDNN/pull/1348" target="_blank">View GitHub PR</a></p>
       </div>
     </section>
 
     <section id="blog">
-      <h2>Blog</h2>
-      <div class="blog-post">
+      <h2 class="section-title">Blog</h2>
+      <div class="card">
         <h3>How I Optimized an Algorithm 20x Using CUDA</h3>
         <p>Coming soon...</p>
       </div>
-      <div class="blog-post">
+      <div class="card">
         <h3>My Journey from TCS to Intel to GSU</h3>
         <p>Coming soon...</p>
       </div>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
+      <h2 class="section-title">Contact</h2>
       <p>Email: <a href="mailto:nikhilvashista2021@gmail.com">nikhilvashista2021@gmail.com</a></p>
       <p>LinkedIn: <a href="https://linkedin.com/in/nikhil-vashista" target="_blank">linkedin.com/in/nikhil-vashista</a></p>
       <p>GitHub: <a href="https://github.com/SNikhilVashista" target="_blank">github.com/SNikhilVashista</a></p>
